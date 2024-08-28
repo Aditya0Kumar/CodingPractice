@@ -27,3 +27,5 @@ int main(){
         cout<<"Not Palendrome";
     }
 }
+/*NOTE: We can use toupper or tolower if there exists a character that is in Cap while other are lower.*/
+
