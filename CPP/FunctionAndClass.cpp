@@ -30,39 +30,92 @@ void MainStudent(){//This is Function
     cout<<"Name: "<<C.name<<" Age: "<<C.age<<" Roll No.: "<<C.roll<<endl;
 }
 
-class room{//This is class
+class StudentWithConstructor{
     public:
+    string name;
+    int age;
+    int roll;
 
+    StudentWithConstructor(string name,int age, int roll){//This is Constructor
+        this->name;
+        this->age;
+        this->roll;
+        cout<<"Name: "<<name<<" Age: "<<age<<" Roll No.: "<<roll<<endl;
+    }
+};
+
+void MainStudentWithConstructor(){
+    StudentWithConstructor A("Aditya",18,3);
+    StudentWithConstructor B("Nitin",212,56);
+    StudentWithConstructor C("Prabhu",20,9);
+
+}
+
+
+class room{
+    public:
     int l,b,h;
-
-    int area(){//This in method
-        return (l*b);
-    }
-
-    int vol(){//This is Method
-        return (l*b*h);
-    }
 
     room(){//This is Constructor
         cout<<"This is a constructor..."<<endl;
     }
 
+    room(int l,int b,int h){
+        this->l = l;
+        this->b = b;
+        this->h = h;
+    }
+
+    room(room &r1){
+        l=r1.l;
+        b=r1.b;
+        h=r1.h;
+    }
+
+    int area(){//This in method
+        return (l*b);
+    }
+
+    int vol(){
+        return (l*b*h);
+    }
+
+
+
+    ~room(){
+        cout<<"This is Deconstructor..."<<endl;
+    }
+
 };
 
-void RoomMain(){//This in Function
-    room r1;
+void MainRoom(){//This in Function
+    room room1(10,12,6);
+    /*
     cout<<"Enter l b h: "<<endl;
-    cin>>r1.l;
-    cin>>r1.b;
-    cin>>r1.h;
-    cout<<"Area: "<<r1.area()<<endl;
-    cout<<"Vol: "<<r1.vol()<<endl;
+    cin>>r.l;
+    cin>>r.b;
+    cin>>r.h;
+    */
+    room room2(23,34,2);
+    room room3(room2);
+    cout<<"Area: "<<room2.area()<<endl;
+    cout<<"Vol: "<<room3.vol()<<endl;
 }
 
 
 
 
 int main(){
-
-    RoomMain();
+    //MainStudent();
+    //MainStudentWithConstructor();
+    MainRoom();
 }
+
+
+/*
+Notes:
+Constructor wors on its own hence there is no need for initisalising
+~XYZ ==> This is Deconstructor,i.e, called in last after conasructor and all methods.
+
+
+*/
