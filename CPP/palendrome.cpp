@@ -6,8 +6,8 @@ using namespace std;
 bool ispalendrome(char arr[],int size){
     int s=0;
     int e = size-1;
-    while(s<e){
-        if(arr[s]!=arr[e]){
+    while(s < e){
+        if(arr[s] != arr[e]){
             return false;
         }
         else{
