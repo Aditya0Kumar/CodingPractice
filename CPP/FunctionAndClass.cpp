@@ -66,13 +66,13 @@ class room{
         this->h = h;
     }
 
-    room(room &r1){
-        l=r1.l;
-        b=r1.b;
-        h=r1.h;
-    }
+    // room(room &r1){
+    //     l=r1.l;
+    //     b=r1.b;
+    //     h=r1.h;
+    // }
 
-    int area(){//This in method
+    int area(){//This is a method
         return (l*b);
     }
 
@@ -97,7 +97,7 @@ void MainRoom(){//This in Function
     cin>>r.h;
     */
     room room2(23,34,2);
-    room room3(room2);
+    room room3(room1);
     cout<<"Area: "<<room2.area()<<endl;
     cout<<"Vol: "<<room3.vol()<<endl;
 }
