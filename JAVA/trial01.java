@@ -21,6 +21,7 @@ class trial01{
                 System.out.println("Less than 5: i = " + i);
                 i++;
             }
+            
             System.out.println("More than 5 : i = " + i);
         }
 

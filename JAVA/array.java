@@ -5,6 +5,7 @@ public class array {
         int[] arr = new int[20];
 
         Scanner scn = new Scanner(System.in);
+        
         System.out.println("Enter array: ");
 
         for(int i = 0; i < 20; i++){

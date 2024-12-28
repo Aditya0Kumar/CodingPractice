@@ -24,6 +24,7 @@ public class trial02 {
         int a = scn.nextInt();
         System.out.println("Enter second num: ");
         int b = scn.nextInt();
+        
         sum(a,b);
 
         scn.close();
